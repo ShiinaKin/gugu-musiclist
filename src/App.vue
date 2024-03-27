@@ -3,18 +3,6 @@ import AvatarProfile from "./components/AvatarProfile.vue";
 import MusicLabel from "./components/MusicLabel.vue";
 import MusicList from "./components/MusicList.vue";
 import FooterComponent from "./components/FooterComponent.vue";
-import { useMusicStore } from "@/stores/counter";
-import { onMounted } from "vue";
-import { getMusicListFromTencentDoc } from "@/util/MusicUtils";
-import type { MusicData } from "./type/MusicData";
-
-const musicStore = useMusicStore();
-
-onMounted(async () => {
-  const rawMusicList = await getMusicListFromTencentDoc();
-  musicStore.rawMusicList = rawMusicList as Array<MusicData>;
-  musicStore.musicList = rawMusicList as Array<MusicData>;
-});
 </script>
 
 <template>

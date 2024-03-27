@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { useMessage } from "naive-ui";
 import { useMusicStore } from "@/stores/counter";
+import { getMusicListFromTencentDoc } from "@/util/MusicUtils";
 import type { MusicData } from "@/type/MusicData";
 
 const message = useMessage();
@@ -38,6 +39,16 @@ const rowProps = (row: MusicData) => {
     }
   };
 };
+
+onMounted(async () => {
+  try {
+    const rawMusicList = await getMusicListFromTencentDoc();
+    musicStore.rawMusicList = rawMusicList as Array<MusicData>;
+    musicStore.musicList = rawMusicList as Array<MusicData>;
+  } catch (error) {
+    message.error("获取歌单失败，请刷新重试");
+  }
+});
 </script>
 <template>
   <div class="flex flex-col">
