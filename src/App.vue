@@ -8,7 +8,7 @@ import FooterComponent from "./components/FooterComponent.vue";
 <template>
   <div id="container" class="h-full bg-fixed bg-top bg-cover overflow-y-auto">
     <n-message-provider>
-      <div class="container mx-auto w-2/3 h-full pt-10 flex flex-col gap-6">
+      <div class="container mx-auto w-5/6 lg:w-2/3 h-full pt-10 flex flex-col gap-6">
         <AvatarProfile />
         <MusicLabel />
         <MusicList />
