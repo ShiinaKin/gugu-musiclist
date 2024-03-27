@@ -20,7 +20,7 @@ function handleJump(target: string) {
 }
 </script>
 <template>
-  <div class="flex content-center">
+  <div class="flex content-center flex-col gap-5 lg:flex-row lg:gap-0">
     <div class="basis-2/5 flex justify-center">
       <img src="../assets/avatar.jpg" alt="avatar" class="h-60 object-contain rounded-full" />
     </div>
@@ -42,7 +42,7 @@ function handleJump(target: string) {
           <li>开门时间……？诊所随机开门无可厚非吧。 休诊日一般会掉落动态通知（？</li>
           <li>歌单里的歌好多可能都忘了具体怎么唱了！</li>
           <li>艾宾浩斯遗忘曲线！！！！懂？？？？？</li>
-          <li class="mt-4 flex gap-5">
+          <li class="mt-4 flex gap-5 flex-wrap">
             <n-button @click="handleJump('live')">直播间</n-button>
             <n-button @click="handleJump('profile')">个人主页</n-button>
             <n-button @click="handleJump('musicList')">官方歌单</n-button>
