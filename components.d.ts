@@ -8,7 +8,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AvatarProfile: typeof import('./src/components/AvatarProfile.vue')['default']
-    Footer: typeof import('./src/components/Footer.vue')['default']
     FooterComponent: typeof import('./src/components/FooterComponent.vue')['default']
     MusicLabel: typeof import('./src/components/MusicLabel.vue')['default']
     MusicList: typeof import('./src/components/MusicList.vue')['default']

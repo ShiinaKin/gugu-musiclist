@@ -32,7 +32,10 @@ export async function getMusicListFromTencentDoc() {
         .flatMap((musicList: any) => musicList);
       return musicList;
     })
-    .catch((error: any) => console.error("Error fetching JSON:", error));
+    .catch((error: any) => {
+      console.error("Error fetching JSON:", error);
+      throw error;
+    });
 }
 
 function getMusicLabelByIdx(index: number): string {
