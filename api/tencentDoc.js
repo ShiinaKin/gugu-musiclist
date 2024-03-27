@@ -8,12 +8,9 @@ export default async function (req, res) {
       }
     })
     .then((response) => {
-      console.log("==========");
-      console.log(response.data);
-      console.log("==========");
       res.status(200).json(response.data);
     })
     .catch((error) => {
-      console.log(error);
+      res.status(500).json({ error: error.message });
     });
 }

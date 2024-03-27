@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/tencentDoc",
-      "destination": "/api/proxy"
+      "destination": "/api/tencentDoc"
     }
   ]
 }
