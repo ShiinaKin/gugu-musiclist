@@ -20,7 +20,7 @@ function handleJump(target: string) {
 }
 </script>
 <template>
-  <div class="h-1/4 flex content-center">
+  <div class="flex content-center">
     <div class="basis-2/5 flex justify-center">
       <img src="../assets/avatar.jpg" alt="avatar" class="h-60 object-contain rounded-full" />
     </div>
