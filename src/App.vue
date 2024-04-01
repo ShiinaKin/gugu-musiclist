@@ -14,6 +14,7 @@ import FooterComponent from "./components/FooterComponent.vue";
         <MusicList />
         <FooterComponent class="mt-auto" />
       </div>
+      <n-back-top />
     </n-message-provider>
   </div>
 </template>
