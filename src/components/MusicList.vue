@@ -10,6 +10,13 @@ const musicStore = useMusicStore();
 
 const columns = ref([
   {
+    title: "#",
+    key: "idx",
+    render(row: MusicData, rowIndex: number) {
+      return rowIndex + 1;
+    }
+  },
+  {
     title: "歌名",
     key: "name"
   },
