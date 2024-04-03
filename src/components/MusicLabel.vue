@@ -94,7 +94,7 @@ function handleSearch(value: string) {
         >
         <n-button
           color="#a8aae2"
-          class="sm:basis-1/6 sm:rounded-lg sm:inline-flex sm:bg-[#a8aae2] hidden"
+          class="basis-1/6 rounded-lg min-[487px]:inline-flex bg-[#a8aae2] hidden"
           @click="message.info('ovO')"
           >-</n-button
         >
